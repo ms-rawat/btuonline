@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button,Grid} from '@mui/material'
+import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
+import Sem from  './BtuWeb/Sem'
+import Home from './BtuWeb/Home';
+import PLink from './BtuWeb/PLink';
+import Branch from './BtuWeb/Branch'
+let App;
+export default App=()=>{
+  return(
+    <>
+    
+    <BrowserRouter>
+    <Routes>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+    <Route path='/map'  element={<h1>h1 tag</h1>}/>
+    <Route path='/'  element={<Home/>}/>
+    <Route path='/Sem' element={<Sem/>}/>
+    <Route path='/PLink'  element={<PLink/>}/>
+    <Route path='/Branch' element={<Branch/>}/>
+
+    </Routes>
+    </BrowserRouter>
+
+  
+    
+    </>
+  )
 }
-
-export default App;
